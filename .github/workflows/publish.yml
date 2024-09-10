@@ -1,0 +1,30 @@
+name: viruelaMono
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs: 
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone code
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        run: docker login -u "${{secrets.DOCKER_USERNAME}}" -p "${{secrets.DOCKER_PASSWORD}}"
+
+      - name: Build Docker Image
+        run: docker build -t fernandaglez/711-viruelamono:${{github.sha}} .
+
+      - name: Tag Latest
+        run: docker tag fernandaglez/711-viruelamono:${{github.sha}} fernandaglez/711-viruelamono:latest
+
+      - name: Push Docker Image
+        run: |
+          docker push fernandaglez/711-viruelamono:${{github.sha}}
+          docker push fernandaglez/711-viruelamono:latest
+
+
+          
