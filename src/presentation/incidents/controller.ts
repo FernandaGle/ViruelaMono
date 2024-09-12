@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import { IncidentModel } from "../../data/models/incident.model"
-import { EmailService } from "../../../domain/services/email.service";
+import { EmailService } from "../../../domain/service/email.service";
 
 export class IncidentController {
 
