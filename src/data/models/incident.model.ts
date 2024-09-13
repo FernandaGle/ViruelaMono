@@ -7,7 +7,7 @@ const incidentSchema = new mongoose.Schema({
    },
     description:{
      type: String, 
-     require: true
+     required: true
     },
     lat:{
         type: Number,
@@ -15,7 +15,7 @@ const incidentSchema = new mongoose.Schema({
     },
     lng:{
         type: Number,
-        require: true
+        required: true
     },
     isEmailSent:{
         type: Boolean,

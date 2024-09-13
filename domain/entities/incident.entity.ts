@@ -10,6 +10,11 @@ export interface IIncident{
 }
 
 export interface IncidentDocument extends Document, IIncident{
-    
+
+    title: string;
+    description: string;
+    lng: number;
+    lat: number;
+    isEmailSent: boolean;
 
 }
