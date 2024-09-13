@@ -5,7 +5,7 @@ import { envs } from '../../src/config/envs';
 interface MailOptions{
     to: string
     subject: string
-    htmlbody: string
+    htmlbody: string  
 }
 
 export class EmailService{
