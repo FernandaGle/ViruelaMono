@@ -4,7 +4,7 @@ import 'dotenv/config'
 import { MongoDatabase } from "./data/init";
 import { IncidentModel } from "./data/models/incident.model";
 import { AppRoutes } from "./presentation/routes";
-import { emailJob } from "../domain/jobs/email.job;
+import { emailJob } from '../domain/jobs/email.job';
 
 console.log(envs.PORT);
 const app = express();
