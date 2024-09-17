@@ -22,8 +22,6 @@ app.use(AppRoutes.routes);
     }))
 ();
 
-
-
 app.listen(envs.PORT,()=>{
 console.log("Corriendo puerto 3000")
 })
@@ -33,9 +31,9 @@ const caseSchema = new mongoose.Schema({
   description: String,
   lng: Number,
   lat: Number,
-    isEmailSent: Boolean,
-    genre: String,
-    age: Number,
+  isEmailSent: Boolean,
+  genre: String,
+  age: Number,
   date: { type: Date, default: Date.now },
 });
 const Case = mongoose.model('Case', caseSchema);
