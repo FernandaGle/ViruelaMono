@@ -22,7 +22,9 @@ export const emailJob = () => {
                             incident.title,
                             incident.description,
                             incident.lat,
-                            incident.lng
+                            incident.lng,
+                            incident.genre,
+                            incident.age
                         )
                         await emailService.sendEmail({
                             to: "fg282061@gmail.com",
@@ -35,7 +37,9 @@ export const emailJob = () => {
                             description: incident.description,
                             lat: incident.lat,
                             lng: incident.lng,
-                            isEmailSent: true
+                            isEmailSent: true,
+                            genre: incident.genre,
+                            age: incident.age
                         };
                         await IncidentModel.findByIdAndUpdate(incident._id, updateIncident);
                         console.log(`Incidente actualizado para el Id: ${incident._id}`);
