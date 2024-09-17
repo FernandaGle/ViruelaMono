@@ -10,7 +10,9 @@ export class IncidenteDataSource{
             description: incident.description,
             lng: incident.lng,
             lat:incident.lat,
-            isEmailSent:incident.isEmailSent
+            isEmailSent:incident.isEmailSent,
+            genre: incident.genre,
+            age: incident.age
 
         });
     }
