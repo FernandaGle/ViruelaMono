@@ -7,6 +7,8 @@ export interface IIncident{
     lat : number;
     lgn : number;
     isEmailSent: boolean;
+    genre: string;
+    age: number;
 }
 
 export interface IncidentDocument extends Document, IIncident{
@@ -16,5 +18,7 @@ export interface IncidentDocument extends Document, IIncident{
     lng: number;
     lat: number;
     isEmailSent: boolean;
+    genre: string;
+    age: number;
 
 }
