@@ -1,5 +1,5 @@
 import { envs } from "../../src/config/envs";
-export function generateIncidentEmailTemplate(title: string,description:string, lat: number, lng: number): string {
+export function generateIncidentEmailTemplate(title: string,description:string, lat: number, lng: number,genre: String, age: Number): string {
     const mapboxURL = generateMapboxStaticImageURL(lat,lng)
     return `
     <!DOCTYPE html>
