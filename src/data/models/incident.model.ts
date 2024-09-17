@@ -20,6 +20,14 @@ const incidentSchema = new mongoose.Schema({
     isEmailSent:{
         type: Boolean,
         default: false
+    },
+   genre:{
+        type:String,
+        required: true
+    },
+    age:{
+        type:Number,
+        required: true
     }
 });
 
